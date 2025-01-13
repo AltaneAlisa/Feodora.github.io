@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Details</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        /* Container for slideshow */
+        .w3-content {
+            max-width: 70%; /* Maximum width of the container */
+            margin: auto; /* Center the container */
+            overflow: hidden; /* Prevent content overflow */
+        }
+
+        /* Styling for images */
+        .mySlides {
+            display: none; /* Hide images by default */
+            width: 100%; /* Ensure images fill the container's width */
+            height: 100%; /* Set a fixed height for uniformity */
+            object-fit: cover; /* Crop the image to fill the container while keeping its aspect ratio */
+        }
+
+        /* Ensure responsiveness for the container */
+        @media (max-width: 768px) {
+            .mySlides {
+                height: 200px; /* Reduce height for smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .mySlides {
+                height: 150px; /* Reduce height further for very small screens */
+            }
+        }
+
+        h1 
+        {
+            line-height: 1.5;
+            color: rgba(0, 0, 0, 0.8);
+            font-weight: 400;
+            font-family: "Lora", serif;
+            font-size:3.5vw;
+            margin-bottom: 2%;
+            margin-top: 2%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="w3-center">Feodora in details</h1>
+
+    <div class="w3-content w3-section">
+        <img class="mySlides" src="images/details/RENDER2.png" alt="RENDER2">
+        <img class="mySlides" src="images/details/RENDER3.png" alt="RENDER3">
+        <img class="mySlides" src="images/details/RENDER5.png" alt="RENDER5">
+        <img class="mySlides" src="images/details/SNAP_1.jpg" alt="SNAP_1">
+        <img class="mySlides" src="images/details/SNAP_2.jpg" alt="SNAP_2">
+        <img class="mySlides" src="images/details/SNAP_3.jpg" alt="SNAP_3">
+        <img class="mySlides" src="images/details/SNAP_4.jpg" alt="SNAP_4">
+        <img class="mySlides" src="images/details/SNAP_5.jpg" alt="SNAP_5">
+        <img class="mySlides" src="images/details/SNAP_7.jpg" alt="SNAP_7">
+        <img class="mySlides" src="images/details/SNAP_8.jpg" alt="SNAP_8">
+        <img class="mySlides" src="images/details/SNAP_9.jpg" alt="SNAP_9">
+        <img class="mySlides" src="images/details/SNAP_10.jpg" alt="SNAP_10">
+        <img class="mySlides" src="images/details/SNAP_11.jpg" alt="SNAP_11">
+    </div>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1;
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+    </script>
+
+</body>
+
+</html>
